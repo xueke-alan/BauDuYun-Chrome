@@ -20,17 +20,13 @@
     console.log();
     document.title = decodeURI(file)
 
-    // document.querySelector('.header-box').remove()
-    document.querySelector('.header-box').innerHTML=''
-    document.querySelector('.header-box').style.boxShadow='0px 5px 5px 0px #ababab'
-    document.querySelector('.header-box').style.height='1px'
-    document.querySelector('.header-box').style.marginBottom='5px'
+    document.querySelector('.header-box').remove()
     document.querySelector('.video-title').remove()
     document.querySelector('.video-functions-tips').remove()
     document.querySelector('.dis-footer').remove()
     document.querySelector('.module-video').style.background = 'inherit'
     document.querySelector('#video-wrap-outer').style.marginTop = '15px'
-    document.body.style.overflow = 'overlay'
+    document.body.style.overflow = 'hidden'
 
     let isFull = false
 
