@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         百度网盘webapp模式
 // @namespace    https://pan.baidu.com
 // @version      0.1
 // @description  try to take over the world!
@@ -41,7 +41,6 @@
         return `${window.location.origin}/disk/pdfview?${window.location.hash.split("&")[1]}/${fileName}`
       }
     };
-
     const bind = setInterval(() => {
       // 给不会被销毁的元素挂事件委托
       const table = document.querySelector(".wp-s-pan-table");
@@ -67,10 +66,7 @@
       table.addEventListener("dblclick", (e) => { e.stopPropagation(); }, true);
       clearTimeout(bind);
     }, 50);
-
-
     // 给其他按钮绑定
-
     window.onload = () => {
       const bind2 = setInterval(() => {
         // 给不会被销毁的元素挂事件委托
@@ -98,7 +94,6 @@
     const file = window.location.hash.split('&')[0].split('%2F').pop()
     console.log();
     document.title = decodeURI(file)
-
     document.querySelector('.header-box').remove()
     document.querySelector('.video-title').remove()
     document.querySelector('.video-functions-tips').remove()
@@ -123,14 +118,12 @@
         isFull = !isFull
       }
     })
-
     window.onresize = function () {
       console.log('监听变化')
       if (isFull) {
         full()
       }
     }
-
     function full() {
       document.querySelector('.video-main').style.padding = '0'
       if (document.body.offsetWidth >= 980) {
@@ -151,7 +144,6 @@
         document.querySelector('#video-wrap').style.transformOrigin = 'top left'
         document.querySelector('#video-wrap').style.overflow = 'visible'
       }
-
     }
     function small() {
       document.querySelector('#video-wrap-outer').style.marginTop = '15px'
@@ -162,16 +154,6 @@
       document.querySelector('#video-wrap').style.transform = ""
       document.querySelector('#video-wrap').style.transformOrigin = ''
     }
-
-
-
   }
-
-
-
-
-
-
-
 
 })();
