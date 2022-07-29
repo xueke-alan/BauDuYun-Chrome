@@ -11,7 +11,6 @@
 // ==/UserScript==
 
 
-
 let cssHome = `
 .web-header-ad-item,
 .wp-s-header-cert__ee-cert-tilte,
